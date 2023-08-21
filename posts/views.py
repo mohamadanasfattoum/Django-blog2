@@ -5,7 +5,7 @@ from .models import post
 
 def post_list(request):
     data = post.objects.all() # list
-    return render(request,'all_posto.html',{})
+    return render(request,'all_posto.html',{'posts':data})
 
 
 
