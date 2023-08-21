@@ -19,3 +19,9 @@ class post(models.Model):
 
     def __str__(self) -> str :
         return self.title
+    
+
+
+
+class Comment(models.Model):
+    auther = models.ForeignKey(User, related_name='comment_auther', on_delete=models.CASCADE)
