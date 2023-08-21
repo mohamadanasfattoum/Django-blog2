@@ -26,5 +26,6 @@ class post(models.Model):
 
 class Comment(models.Model):
     auther = models.ForeignKey(User, related_name='comment_auther', on_delete=models.CASCADE)
+    post = models.ForeignKey(post, related_name= 'comment_Post',on_delete=models.CASCADE)
     comment = models.TextField(max_length=500)
     creat_date= models.DateTimeField(default=timezone.now)
