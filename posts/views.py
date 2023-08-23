@@ -19,3 +19,5 @@ def post_detail(request,post_id):
 
 def add_post(request):
     form = PostForm()
+
+    return render(request,'add.html',{'form',form})
