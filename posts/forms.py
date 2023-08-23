@@ -3,4 +3,6 @@ from .models import post
 
 
 class PostForm(forms,ModelForm):
-    pass
+    class Meta:
+        model = post
+        fields='__all__'
