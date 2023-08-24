@@ -18,6 +18,14 @@ def post_detail(request,post_id):
 
 
 def add_post(request):
-    form = PostForm()
+    if request.method == 'post':
+        form = PostForm(request.POST , request.FILES)
+
+    else:
+        form = PostForm()
 
     return render(request,'add.html',{'form':form})
+
+
+
+print(type('POST'))
