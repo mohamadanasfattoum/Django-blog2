@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', post_list),
     path('blog/add/',add_post),
-    path('blog/<int:post_id>',post_detail),
+    path('blog/<int:post_id>/',post_detail),
     path('blog/<int:post_id>/edit/',edit_post),
 ]
 

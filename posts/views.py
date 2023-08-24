@@ -32,7 +32,8 @@ def add_post(request):
 
 
 
-def edit_post(request):
+def edit_post(request,post_id):
+    data = post.objects.get(id=post_id)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
