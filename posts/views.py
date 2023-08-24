@@ -43,3 +43,9 @@ def edit_post(request,post_id):
         form = PostForm(instance=data)
 
     return render(request,'edit.html',{'form':form})
+
+
+
+
+def delete_post(request,post_id):
+    
