@@ -35,11 +35,11 @@ def add_post(request):
 def edit_post(request,post_id):
     data = post.objects.get(id=post_id)
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
+        form = PostForm(request.POST, request.FILES, instance=data)
         if form.is_valid():
             form.save()
 
     else:
-        form = PostForm()
+        form = PostForm(instance=data)
 
     return render(request,'edit.html',{'form':form})
