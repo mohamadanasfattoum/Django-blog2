@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import post
 from .forms import PostForm
 # Create your views here.
@@ -50,4 +50,4 @@ def edit_post(request,post_id):
 def delete_post(request,post_id):
     data = post.objects.get(id=post_id)
     data.delete()
-    
+    return redirect()
