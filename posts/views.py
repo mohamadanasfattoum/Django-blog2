@@ -48,4 +48,6 @@ def edit_post(request,post_id):
 
 
 def delete_post(request,post_id):
+    data = post.objects.get(id=post_id)
+    data.delete()
     
