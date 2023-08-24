@@ -19,13 +19,11 @@ def post_detail(request,post_id):
 
 def add_post(request):
     if request.method == 'post':
-        form = PostForm(request.POST , request.FILES)
+        form = PostForm(request.post , request.FILES)
+        if form.is_valid():
+            form.save()
 
     else:
         form = PostForm()
 
     return render(request,'add.html',{'form':form})
-
-
-
-print(type('POST'))
