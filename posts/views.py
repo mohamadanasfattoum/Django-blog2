@@ -38,7 +38,7 @@ def edit_post(request,post_id):
         form = PostForm(request.POST, request.FILES, instance=data)
         if form.is_valid():
             form.save()
-            return redirect('/blog/')
+            return redirect('/blog/{{data.id}}/')
 
     else:
         form = PostForm(instance=data)
