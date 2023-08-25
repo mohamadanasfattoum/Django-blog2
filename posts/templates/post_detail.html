@@ -1,7 +1,10 @@
 <h2>{{post}}</h2>
 
+<a href="/blog/{{post.id0}}/edit">Edit Post</a>
+
+<hr>
 <p>{{post.content}}</p>
 
 {% if post.image %}
-<img src="{{post.image.url}}" alt="">
+    <img src="{{post.image.url}}" alt="">
 {% endif %}
