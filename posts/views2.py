@@ -7,4 +7,4 @@ context: post_list , object_list
 '''
 
 class PostList(generic.ListView):
-    modol = post   # Query: database
+    model = post   # Query: database
