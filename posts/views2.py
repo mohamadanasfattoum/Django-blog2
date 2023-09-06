@@ -6,5 +6,5 @@ template: post_list.html
 context: post_list , object_list
 '''
 
-class PostList(generic.ListViews):
+class PostList(generic.ListView):
     modol = post   # Query: database
