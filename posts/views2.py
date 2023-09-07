@@ -8,3 +8,10 @@ context: post_list , object_list
 
 class PostList(generic.ListView):
     model = post   # Query: database
+
+
+
+
+
+class PostDetail(generic.DetailView):
+    pass
