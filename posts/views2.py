@@ -14,4 +14,5 @@ class PostList(generic.ListView):
 
 
 class PostDetail(generic.DetailView):
-    pass
+    model = post
+    
