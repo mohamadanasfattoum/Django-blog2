@@ -23,3 +23,4 @@ class PostDetail(generic.DetailView):
 
 class PostCreate(generic.CreateView):
     model = post
+    fields='__all__'
