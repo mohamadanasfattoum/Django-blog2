@@ -11,8 +11,10 @@ class PostList(generic.ListView):
 
 
 
-
+'''
+template: post_detail.html
+context: post , object
+'''
 
 class PostDetail(generic.DetailView):
     model = post
-    
