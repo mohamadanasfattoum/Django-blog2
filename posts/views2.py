@@ -32,3 +32,4 @@ class PostUpdate(generic.UpdateView):
     model= post
     fields='__all__'
     success_url= '/blog/'
+    template_name='posts/edit.html'
