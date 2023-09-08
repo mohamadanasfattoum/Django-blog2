@@ -33,3 +33,8 @@ class PostUpdate(generic.UpdateView):
     fields='__all__'
     success_url= '/blog/'
     template_name='posts/edit.html'
+
+
+
+class PostDelete(generic.DeleteView):
+    model= post
