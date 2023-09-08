@@ -25,3 +25,8 @@ class PostCreate(generic.CreateView):
     model = post
     fields='__all__'
     success_url= '/blog/'
+
+
+
+class PostUpdate(generic.UpdateView):
+    model= post
