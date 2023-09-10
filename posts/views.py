@@ -1,17 +1,17 @@
 from django.shortcuts import render, redirect
-from .models import post
+from .models import Post
 from .forms import PostForm
 # Create your views here.
 
 
 def post_list(request):
-    data = post.objects.all() # list
+    data = Post.objects.all() # list
     return render(request,'all_posto.html',{'posts':data})
 
 
 
 def post_detail(request,post_id):
-    data = post.objects.get(id=post_id)
+    data = Post.objects.get(id=post_id)
     return render(request,'post_detail.html',{'post':data})
 
 
@@ -34,7 +34,7 @@ def add_post(request):
 
 
 def edit_post(request,post_id):
-    data = post.objects.get(id=post_id)
+    data = Post.objects.get(id=post_id)
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=data)
         if form.is_valid():
@@ -50,6 +50,6 @@ def edit_post(request,post_id):
 
 
 def delete_post(request,post_id):
-    data = post.objects.get(id=post_id)
+    data = Post.objects.get(id=post_id)
     data.delete()
     return redirect('/blog/')

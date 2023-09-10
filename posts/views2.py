@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import post
+from .models import Post
 
 '''
 template: post_list.html
@@ -7,7 +7,7 @@ context: post_list , object_list
 '''
 
 class PostList(generic.ListView):
-    model = post   # Query: database
+    model = Post   # Query: database
 
 
 
@@ -17,19 +17,19 @@ context: post , object
 '''
 
 class PostDetail(generic.DetailView):
-    model = post
+    model = Post
 
 
 
 class PostCreate(generic.CreateView):
-    model = post
+    model = Post
     fields='__all__'
     success_url= '/blog/'
 
 
 
 class PostUpdate(generic.UpdateView):
-    model= post
+    model= Post
     fields='__all__'
     success_url= '/blog/'
     template_name='posts/edit.html'
@@ -37,5 +37,5 @@ class PostUpdate(generic.UpdateView):
 
 
 class PostDelete(generic.DeleteView):
-    model= post
+    model= Post
     success_url= '/blog/'
