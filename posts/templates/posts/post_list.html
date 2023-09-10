@@ -62,8 +62,8 @@
                             <p class="post-meta">
                                 Posted by
                                 <a href="#!">{{post.auther}}</a>
-                                on September 24, 2023
-                                {{post.publish_date}}
+                                on
+                                {{post.publish_date|date:"A f F t, o "}}
                             </p>
                             {% endfor %}
                     </div>
